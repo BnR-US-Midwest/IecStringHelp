@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Description</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+<body>
+    <h1>Description</h1>
+    <p>IecStringCopy copies a string.  It is assumed the size of destination is available when calling to protect from overflow.  STRING variables, reference to STRINGs or literals are permitted inputs in IEC languages.</p>
+    <p>Unlike strncpy, IecStringCopy copies all or part (if longer than size) of source <i>and</i> ensures a null terminating string.  Destination is <i>not</i> padded with zeros if source is shorter than size - only the null terminating character is copied.</p>
+    <p>The function immediately returns without processing if any string is NULL or size is zero.</p>
+    <p>Source and destination should not overlap.</p>
+</body>
+</html>
