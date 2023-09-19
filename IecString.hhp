@@ -11,7 +11,7 @@ Language=0x409 English (United States)
 Title=IecString Library Help
 
 [WINDOWS]
-HelpWindow="IecString Library Help","TableOfContents.hhc","Index.hhk",,,,,,,0x2120,,0x3006,[20,20,820,720],,,,,,,0
+HelpWindow="IecString Library Help","TableOfContents.hhc","Index.hhk",,,,,,,0x2120,,0x3006,[20,20,1420,920],,,,,,,0
 
 [FILES]
 Index.html
