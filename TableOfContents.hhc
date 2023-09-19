@@ -25,13 +25,25 @@
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringCopy">
             <param name="Local" value="Functions/IecStringCopy/Index.html">
-            <param name="ImageNumber" value="5">
+            <param name="ImageNumber" value="11">
           </object>
         </li>
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringConcat">
             <param name="Local" value="Functions/IecStringConcat/Index.html">
-            <param name="ImageNumber" value="5">
+            <param name="ImageNumber" value="11">
+          </object>
+        </li>
+        <li> <object type="text/sitemap">
+            <param name="Name" value="IecStringReplace">
+            <param name="Local" value="Functions/IecStringReplace/Index.html">
+            <param name="ImageNumber" value="11">
+          </object>
+        </li>
+        <li> <object type="text/sitemap">
+            <param name="Name" value="IecStringFormat">
+            <param name="Local" value="Functions/IecStringFormat/Index.html">
+            <param name="ImageNumber" value="11">
           </object>
         </li>
       </ul>
