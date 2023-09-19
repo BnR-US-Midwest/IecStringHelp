@@ -28,28 +28,12 @@
             <param name="ImageNumber" value="5">
           </object>
         </li>
-        <ul>
-          <li> <object type="text/sitemap">
-              <param name="Name" value="Description">
-              <param name="Local" value="Functions/IecStringCopy/Description.html">
-              <param name="ImageNumber" value="11">
-            </object>
-          </li>
-        </ul>
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringConcat">
             <param name="Local" value="Functions/IecStringConcat/Index.html">
             <param name="ImageNumber" value="5">
           </object>
         </li>
-        <ul>
-          <li> <object type="text/sitemap">
-              <param name="Name" value="Description">
-              <param name="Local" value="Functions/IecStringConcat/Description.html">
-              <param name="ImageNumber" value="11">
-            </object>
-          </li>
-        </ul>
       </ul>
     </ul>
   </ul>

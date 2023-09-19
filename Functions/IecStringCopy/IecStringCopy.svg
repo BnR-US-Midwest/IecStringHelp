@@ -2,7 +2,7 @@
 <svg version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    width="400px"
+    width="391px"
     height="134px">
     <defs>
         <linearGradient
@@ -91,13 +91,13 @@
     <text x="66px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">STRING</text>
     <text x="118px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">destination</text>
     <path d="M 79,79,105,79" stroke="black"/>
-    <text x="66px" y="83px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">STRING</text>
-    <text x="118px" y="83px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">source</text>
+    <text x="66px" y="83px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">UDINT</text>
+    <text x="118px" y="83px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">size</text>
     <path d="M 79,101,105,101" stroke="black"/>
-    <text x="66px" y="106px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">UDINT</text>
-    <text x="118px" y="106px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">size</text>
+    <text x="66px" y="106px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">STRING</text>
+    <text x="118px" y="106px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">source</text>
     <path d="M 303,55,329,55" stroke="black"/>
-    <text x="342px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">UDINT</text>
+    <text x="342px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">DINT</text>
     <text x="290px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">return</text>
 </svg>
 
