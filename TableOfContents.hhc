@@ -25,9 +25,17 @@
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringCopy">
             <param name="Local" value="Functions/IecStringCopy/Index.html">
-            <param name="ImageNumber" value="11">
+            <param name="ImageNumber" value="5">
           </object>
         </li>
+        <ul>
+          <li> <object type="text/sitemap">
+              <param name="Name" value="Description">
+              <param name="Local" value="Functions/IecStringCopy/Description.html">
+              <param name="ImageNumber" value="11">
+            </object>
+          </li>
+        </ul>
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringConcat">
             <param name="Local" value="Functions/IecStringConcat/Index.html">
@@ -43,15 +51,31 @@
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringFormat">
             <param name="Local" value="Functions/IecStringFormat/Index.html">
-            <param name="ImageNumber" value="11">
+            <param name="ImageNumber" value="5">
           </object>
         </li>
+        <ul>
+          <li> <object type="text/sitemap">
+              <param name="Name" value="Description">
+              <param name="Local" value="Functions/IecStringFormat/Description.html">
+              <param name="ImageNumber" value="11">
+            </object>
+          </li>
+        </ul>
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringInteger">
             <param name="Local" value="Functions/IecStringInteger/Index.html">
-            <param name="ImageNumber" value="11">
+            <param name="ImageNumber" value="5">
           </object>
         </li>
+        <ul>
+          <li> <object type="text/sitemap">
+              <param name="Name" value="Description">
+              <param name="Local" value="Functions/IecStringInteger/Description.html">
+              <param name="ImageNumber" value="11">
+            </object>
+          </li>
+        </ul>
       </ul>
       <li> <object type="text/sitemap">
           <param name="Name" value="Data Types and Constants">

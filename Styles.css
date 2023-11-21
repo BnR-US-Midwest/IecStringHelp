@@ -62,6 +62,13 @@ pre {
   margin: 20px 0px;
 }
 
+code {
+  background-color: #eeeeee;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2px;
+  border-radius: 2px;
+}
+
 img {
   margin: 20px 0px;
 }

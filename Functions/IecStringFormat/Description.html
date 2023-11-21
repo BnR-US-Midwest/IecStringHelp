@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IecStringFormat Description</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+<body>
+  <h1>Description</h1>
+
+  <h2>IecStringFormat Examples</h2>
+
+  <h3>IEC Structured Text</h3>
+
+  <pre>
+    VAR
+      &nbsp;&nbsp;FromattedString : STRING[80];
+      &nbsp;&nbsp;FormatValues : IecStringFormatType;
+    END_VAR
+  </pre>
+
+  <pre>
+    PROGRAM _INIT
+      &nbsp;&nbsp;FormatValues.b[0] := TRUE;
+      &nbsp;&nbsp;FormatValues.f[0] := 12.34;
+      &nbsp;&nbsp;FormatValues.i[0] := 33;
+      &nbsp;&nbsp;FormatValues.s[0] := 'All Clear';
+    END_PROGRAM
+  </pre>
+
+  <pre>
+    PROGRAM _CYCLIC
+      &nbsp;&nbsp;IecStringFormat(FromattedString, SIZEOF(FromattedString)'Error: %b, Temp: %f C, Step: %i, Message: %s', FormatValues);
+    END_PROGRAM
+  </pre>
+
+  <p>The value of <code>FormattedString</code> is <code>'Error: TRUE, Temp: 12.34 C, Step: 33, Message: All Clear'</code>.</p>
+
+</body>
+</html>

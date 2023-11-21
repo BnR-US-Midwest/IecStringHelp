@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IecStringCopy Description</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+<body>
+  <h1>Description</h1>
+
+  <h2>IecStringCopy Examples</h2>
+
+  <h3>IEC Structured Text</h3>
+
+  <pre>
+    VAR
+      &nbsp;&nbsp;Source : STRING[10] := 'Program';
+      &nbsp;&nbsp;Destination : STRING[5];
+    END_VAR
+  </pre>
+
+  <pre>
+    PROGRAM _CYCLIC
+      &nbsp;&nbsp;IecStringCopy(Destination, SIZEOF(Destination), Source);
+    END_PROGRAM
+  </pre>
+
+  <p>The value of <code>Destination</code> is <code>'Progr'</code>.</p>
+
+</body>
+</html>
