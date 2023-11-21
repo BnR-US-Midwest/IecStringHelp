@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IecStringInteger</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+<body>
+  <h1>IecStringInteger</h1>
+
+  <p>Pad a whole number with zeros or spaces.</p>
+
+  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.</p>
+
+  <img src="IecStringInteger.svg" alt="IecStringInteger interface" style="width: 391px; height: 180px;">
+
+  <table>
+    <tr>
+      <th>I/O</th>
+      <th>Parameter</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>destination</td>
+      <td>STRING</td>
+      <td>Destination string</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>size</td>
+      <td>UDINT</td>
+      <td>Size of destination</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>value</td>
+      <td>DINT</td>
+      <td>Signed integer</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>width</td>
+      <td>USINT</td>
+      <td>Minimum character width of destination string 1 to 10</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>space</td>
+      <td>USINT</td>
+      <td>Pad with zeros if zero and spaces otherwise</td>
+    </tr>
+  </table>
+</body>
+</html>
