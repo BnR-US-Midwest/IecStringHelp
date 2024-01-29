@@ -1,19 +1,21 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Constants</title>
   <link rel="stylesheet" href="../Styles.css">
 </head>
+
 <body>
   <h1>IecString Constants</h1>
 
   <table>
     <tr>
-      <th style="width: 180px;">Parameter</th>
-      <th style="width: 60px;">Data Type</th>
-      <th style="width: 80px;">Value</th>
+      <th style="width: 260px;">Parameter</th>
+      <th style="width: 100px;">Data Type</th>
+      <th style="width: 100px;">Value</th>
       <th>Description</th>
     </tr>
     <tr>
@@ -29,35 +31,41 @@
       <td>Length of string runtime data</td>
     </tr>
     <tr>
+      <td>IECSTRING_ERROR_NONE</td>
+      <td>DINT</td>
+      <td>0</td>
+      <td>No error</td>
+    </tr>
+    <tr>
       <td>IECSTRING_ERROR_NULL</td>
       <td>DINT</td>
       <td>-515898392</td>
-      <td>String is null</td>
+      <td>One or more strings are null</td>
     </tr>
     <tr>
-      <td>IECSTRING_ERROR_SIZE</td>
+      <td>IECSTRING_ERROR_SIZE_ZERO</td>
       <td>DINT</td>
       <td>-515897392</td>
-      <td>Size is zero</td>
+      <td>Size of destination is zero</td>
+    </tr>
+    <td>IECSTRING_ERROR_SIZE_INVALID</td>
+    <td>DINT</td>
+    <td>-515897382</td>
+    <td>Size of destination is insufficient</td>
     </tr>
     <tr>
       <td>IECSTRING_ERROR_OVERLAP</td>
       <td>DINT</td>
       <td>-515896392</td>
-      <td>The size of destination overlaps with a source string's length</td>
+      <td>The memory of strings overlap</td>
     </tr>
     <tr>
       <td>IECSTRING_WARNING_TRUNCATE</td>
       <td>DINT</td>
       <td>-1589637216</td>
-      <td>The string written to destination has been truncated</td>
-    </tr>
-    <tr>
-      <td>IECSTRING_ERROR_LENGTH</td>
-      <td>DINT</td>
-      <td>-515894392</td>
-      <td>The find substring's length exceeds the source length</td>
+      <td>The result is truncated</td>
     </tr>
   </table>
 </body>
+
 </html>
