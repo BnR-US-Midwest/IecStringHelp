@@ -1,17 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>IecStringConcat</title>
   <link rel="stylesheet" href="../../Styles.css">
 </head>
+
 <body>
   <h1>IecStringConcat</h1>
 
   <p>Concatenate source to destination up to size of destination or source length.</p>
 
-  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.</p>
+  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.
+  </p>
 
   <img src="IecStringConcat.svg" alt="IecStringConcat interface" style="width: 391px; height: 134px;">
 
@@ -41,5 +44,47 @@
       <td>Source string</td>
     </tr>
   </table>
+
+  <h2>Possible Errors</h2>
+
+  <table>
+    <tr>
+      <th>Constant</th>
+      <th>Description</th>
+      <th>Remedy</th>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_NULL</code></a></td>
+      <td>Destination and/or source string is null (the memory address is zero)</td>
+      <td>Destination and source must have a valid memory address</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_SIZE_ZERO</code></a></td>
+      <td>Size is zero</td>
+      <td>Size must be non-zero</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_SIZE_INVALID</code></a></td>
+      <td>Size is less than or equal to the current destination length</td>
+      <td>Size must at least hold the current destination length</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_OVERLAP</code></a></td>
+      <td>The size of destination overlaps with the length of source</td>
+      <td>Destination's memory location must differ from source's</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_WARNING_TRUNCATE</code></a></td>
+      <td>The length of destination and source exceeds the size of destination</td>
+      <td>Increase the size of destination</td>
+    </tr>
+  </table>
+
+  <h2>Topics</h2>
+
+  <ul>
+    <li><a href="Description.html">Description</a></li>
+  </ul>
 </body>
+
 </html>
