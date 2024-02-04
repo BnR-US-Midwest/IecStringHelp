@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IecStringDecimal</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+
+<body>
+  <h1>IecStringDecimal</h1>
+
+  <p>Convert integer to string as decimal.</p>
+
+  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.
+  </p>
+
+  <img src="IecStringDecimal.svg" alt="IecStringDecimal interface" style="width: 391px; height: 180px;">
+
+  <table>
+    <tr>
+      <th>I/O</th>
+      <th>Parameter</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>destination</td>
+      <td>STRING</td>
+      <td>Destination string</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>size</td>
+      <td>UDINT</td>
+      <td>Size of destination</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>value</td>
+      <td>DINT</td>
+      <td>Signed integer</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>width</td>
+      <td>USINT</td>
+      <td>Minimum character width</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>flags</td>
+      <td>USINT</td>
+      <td>Format flags</td>
+    </tr>
+  </table>
+
+  <h2>Supported Flags</h2>
+
+  <table>
+    <tr>
+      <th>Flag</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_FLAG_SIGN</code></td>
+      <td>Preceed number with '+' or '-' sign</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_FLAG_SPACES</code></td>
+      <td>Left-pad number with spaces instead of zeros to fill width</td>
+    </tr>
+  </table>
+
+  <h2>Possible Errors</h2>
+
+  <table>
+    <tr>
+      <th>Constant</th>
+      <th>Description</th>
+      <th>Remedy</th>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_NULL</code></a></td>
+      <td>Destination string is null (the memory address is zero)</td>
+      <td>Destination must have a valid memory address</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_SIZE_ZERO</code></a></td>
+      <td>Size is zero</td>
+      <td>Size must be non-zero</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_SIZE_INVALID</code></a></td>
+      <td>The size is insufficient to hold the minimum character width of the number</td>
+      <td>Increase size to support the character length of the number or minimum width</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_WARNING_TRUNCATE</code></a></td>
+      <td>The resulting string length exceeds the size of destination</td>
+      <td>Increase the size of destination</td>
+    </tr>
+  </table>
+
+  <h2>Topics</h2>
+
+  <ul>
+    <li><a href="Description.html">Description</a></li>
+  </ul>
+
+</body>
+
+</html>

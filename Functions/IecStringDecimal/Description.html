@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IecStringDecimal Description</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+
+<body>
+  <h1>Description</h1>
+
+  <h2>Parameters</h2>
+
+  <div class="note">
+    <p>In an IEC function declaration, a parameter of type <code>STRING[5]</code> is equivalent to a parameter of type <code>STRING[10]</code>. STRINGs are passed as <b>pointers</b> in library functions.</p>
+
+    <p>For this reason, STRING parameters in IecString functions are of type <code>STRING[0]</code> because the size is <b>cannot</b> be checked. If necessary, the size must be <b>explicitely</b> passed as an additional function parameter.</p>
+
+    <p>The IEC <code>ADR()</code> operator on STRINGs is not necessary because the function is expecting a <code>STRING[]</code>, not a <code>UDINT</code>.</p>
+  </div>
+
+  <p>The exact behavior of function parameters can be observed in the automatically generated header file.</p>
+
+  <pre>
+    _BUR_PUBLIC signed long IecStringDecimal(plcstring* destination, unsigned long size, signed long value, unsigned char width, unsigned char flags);
+  </pre>
+
+  <h2>Examples</h2>
+
+  <h3>IEC Structured Text</h3>
+
+  <pre>
+    VAR
+      &nbsp;&nbsp;String1 : STRING[80];
+      &nbsp;&nbsp;Number : DINT := 123;
+    END_VAR
+  </pre>
+
+  <pre>
+    PROGRAM _CYCLIC
+      &nbsp;&nbsp;IecStringDecimal(String1, SIZEOF(String1), Number, 6, IECSTRING_FLAG_SIGN);
+    END_PROGRAM
+  </pre>
+
+  <p>The value of <code>String1</code> is <code>'+00123'</code>.</p>
+
+</body>
+
+</html>

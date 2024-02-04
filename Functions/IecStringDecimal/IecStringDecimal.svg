@@ -86,7 +86,7 @@
     <use x="105px" y="159px" xlink:href="#FB_BodyArea2"/>
     <use x="105px" y="21px" xlink:href="#FB_BodyFrame"/>
     <use x="105px" y="21px" xlink:href="#FB_Header"/>
-    <text x="204px" y="37px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:middle;writing-mode:lr">IecStringInteger</text>
+    <text x="204px" y="37px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:middle;writing-mode:lr">IecStringDecimal</text>
     <path d="M 79,55,105,55" stroke="black"/>
     <text x="66px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">STRING</text>
     <text x="118px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">destination</text>
@@ -101,7 +101,7 @@
     <text x="118px" y="129px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">width</text>
     <path d="M 79,147,105,147" stroke="black"/>
     <text x="66px" y="152px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">USINT</text>
-    <text x="118px" y="152px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">space</text>
+    <text x="118px" y="152px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">flags</text>
     <path d="M 303,55,329,55" stroke="black"/>
     <text x="342px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">DINT</text>
     <text x="290px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">return</text>

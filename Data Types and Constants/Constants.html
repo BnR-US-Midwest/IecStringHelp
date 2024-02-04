@@ -11,6 +11,8 @@
 <body>
   <h1>IecString Constants</h1>
 
+  <h2>Sizes</h2>
+
   <table>
     <tr>
       <th style="width: 260px;">Parameter</th>
@@ -29,6 +31,17 @@
       <td>USINT</td>
       <td>80</td>
       <td>Length of string runtime data</td>
+    </tr>
+  </table>
+
+  <h2>Status Numbers</h2>
+
+  <table>
+    <tr>
+      <th style="width: 260px;">Parameter</th>
+      <th style="width: 100px;">Data Type</th>
+      <th style="width: 100px;">Value</th>
+      <th>Description</th>
     </tr>
     <tr>
       <td>IECSTRING_ERROR_NONE</td>
@@ -66,6 +79,42 @@
       <td>The result is truncated</td>
     </tr>
   </table>
+
+  <h2>Flags</h2>
+
+  <table>
+    <tr>
+      <th style="width: 260px;">Parameter</th>
+      <th style="width: 100px;">Data Type</th>
+      <th style="width: 100px;">Value</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>IECSTRING_FLAG_NONE</td>
+      <td>USINT</td>
+      <td>0</td>
+      <td>No option selected</td>
+    </tr>
+    <tr>
+      <td>IECSTRING_FLAG_SIGN</td>
+      <td>USINT</td>
+      <td>1</td>
+      <td>Preceed number with + or - sign</td>
+    </tr>
+    <tr>
+      <td>IECSTRING_FLAG_SPACES</td>
+      <td>USINT</td>
+      <td>2</td>
+      <td>Left-pad number with spaces instead of zeros to fill width</td>
+    </tr>
+    <tr>
+      <td>IECSTRING_FLAG_E_NOTATION</td>
+      <td>USINT</td>
+      <td>4</td>
+      <td>Use scientific notation</td>
+    </tr>
+  </table>
+
 </body>
 
 </html>
