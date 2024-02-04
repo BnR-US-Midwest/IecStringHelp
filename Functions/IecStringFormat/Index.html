@@ -1,17 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>IecStringFormat</title>
   <link rel="stylesheet" href="../../Styles.css">
 </head>
+
 <body>
   <h1>IecStringFormat</h1>
 
   <p>Format string with runtime data.</p>
 
-  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.</p>
+  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.
+  </p>
 
   <img src="IecStringFormat.svg" alt="IecStringFormat interface" style="width: 461px; height: 157px;">
 
@@ -48,11 +51,70 @@
     </tr>
   </table>
 
+  <h2>Format Specifiers</h2>
+
+  <p>Similar to <a href="https://cplusplus.com/reference/cstdio/printf/" target="_blank">printf</a>, the resulting string can be formatted using specifiers in the source string.</p>
+
+  <table>
+    <tr>
+      <th>Specifier</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>%b</code></td>
+      <td>Place the next boolean (<code>BOOL</code>) value from the values array</td>
+    </tr>
+    <tr>
+      <td><code>%f</code>, <code>%r</code></td>
+      <td>Place the next floating point (<code>REAL</code>) value from the values array</td>
+    </tr>
+    <tr>
+      <td><code>%i</code>, <code>%d</code></td>
+      <td>Place the next signed integer (<code>DINT</code>) value from the values array</td>
+    </tr>
+    <tr>
+      <td><code>%i</code>, <code>%d</code></td>
+      <td>Place the next string (<code>STRING[<a href="../../Data Types and Constants/Constants.html">IECSTRING_FORMAT_LENGTH</a>]</code>) value from the values array</td>
+    </tr>
+  </table>
+
+  <h2>Possible Errors</h2>
+
+  <table>
+    <tr>
+      <th>Constant</th>
+      <th>Description</th>
+      <th>Remedy</th>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_NULL</code></a></td>
+      <td>Destination and/or source string is null (the memory address is zero)</td>
+      <td>Destination and source must have a valid memory address</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_SIZE_ZERO</code></a></td>
+      <td>Size is zero</td>
+      <td>Size must be non-zero</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_OVERLAP</code></a></td>
+      <td>The size of destination overlaps with the length of source</td>
+      <td>Destination's memory location must differ from source's</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_WARNING_TRUNCATE</code></a></td>
+      <td>The resulting string length exceeds the size of destination</td>
+      <td>Increase the size of destination</td>
+    </tr>
+  </table>
+
   <h2>Topics</h2>
 
   <ul>
     <li><a href="Description.html">Description</a></li>
   </ul>
 
+
 </body>
+
 </html>

@@ -1,41 +1,58 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>IecStringFormat Description</title>
   <link rel="stylesheet" href="../../Styles.css">
 </head>
+
 <body>
   <h1>Description</h1>
 
-  <h2>IecStringFormat Examples</h2>
+  <p>In an IEC function declaration, a parameter of type <code>STRING[5]</code> is equivalent to a parameter of type <code>STRING[10]</code>.  STRINGs are passed as pointers (to the array of characters) in library functions.</p>
+
+  <p>For this reason the STRING parameters in IecString functions are of type <code>STRING[0]</code> because the size is not checked.  The size must be explicitely passed as an additional function parameter.</p>
+
+  <p>The IEC <code>ADR()</code> operator on STRINGs is not necessary because this function is expecting a <code>STRING[]</code> (pointer to) and not a <code>UDINT</code>.</p>
+
+  <p>Structure data types like <a href="../../Data Types and Constants/IecStringFormatType.html">IecStringFormatType</a> are also passed by reference in IEC string functions.  The IEC <code>ADR()</code> operator is also not necessary for structure data type input function parameters.</p>
+
+  <p>These details can be observed in the function prototypes of the automatically generated library header.</p>
+
+  <pre>
+    _BUR_PUBLIC signed long IecStringFormat(plcstring* destination, unsigned long size, plcstring* source, struct IecStringFormatType* values);
+  </pre>
+
+  <h2>Examples</h2>
 
   <h3>IEC Structured Text</h3>
 
   <pre>
     VAR
-      &nbsp;&nbsp;FromattedString : STRING[80];
-      &nbsp;&nbsp;FormatValues : IecStringFormatType;
+      &nbsp;&nbsp;String1 : STRING[80];
+      &nbsp;&nbsp;Values : IecStringFormatType;
     END_VAR
   </pre>
 
   <pre>
     PROGRAM _INIT
-      &nbsp;&nbsp;FormatValues.b[0] := TRUE;
-      &nbsp;&nbsp;FormatValues.f[0] := 12.34;
-      &nbsp;&nbsp;FormatValues.i[0] := 33;
-      &nbsp;&nbsp;FormatValues.s[0] := 'All Clear';
+      &nbsp;&nbsp;Values.b[0] := TRUE;
+      &nbsp;&nbsp;Values.f[0] := 12.34;
+      &nbsp;&nbsp;Values.i[0] := 33;
+      &nbsp;&nbsp;Values.s[0] := 'All Clear';
     END_PROGRAM
   </pre>
 
   <pre>
     PROGRAM _CYCLIC
-      &nbsp;&nbsp;IecStringFormat(FromattedString, SIZEOF(FromattedString)'Error: %b, Temp: %f C, Step: %i, Message: %s', FormatValues);
+      &nbsp;&nbsp;IecStringFormat(String1, SIZEOF(String1), 'Error: %b, Temp: %f C, Step: %i, Message: %s', Values);
     END_PROGRAM
   </pre>
 
-  <p>The value of <code>FormattedString</code> is <code>'Error: TRUE, Temp: 12.34 C, Step: 33, Message: All Clear'</code>.</p>
+  <p>The value of <code>String1</code> is <code>'Error: TRUE, Temp: 12.34 C, Step: 33, Message: All Clear'</code>.</p>
 
 </body>
+
 </html>
