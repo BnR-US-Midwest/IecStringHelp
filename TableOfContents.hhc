@@ -53,9 +53,17 @@
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringReplace">
             <param name="Local" value="Functions/IecStringReplace/Index.html">
-            <param name="ImageNumber" value="11">
+            <param name="ImageNumber" value="5">
           </object>
         </li>
+        <ul>
+          <li> <object type="text/sitemap">
+              <param name="Name" value="Description">
+              <param name="Local" value="Functions/IecStringReplace/Description.html">
+              <param name="ImageNumber" value="11">
+            </object>
+          </li>
+        </ul>
         <li> <object type="text/sitemap">
             <param name="Name" value="IecStringFormat">
             <param name="Local" value="Functions/IecStringFormat/Index.html">

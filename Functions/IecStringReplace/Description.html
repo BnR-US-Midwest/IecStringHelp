@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IecStringConcat Description</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+
+<body>
+  <h1>Description</h1>
+
+  <p>In an IEC function declaration, a parameter of type <code>STRING[5]</code> is equivalent to a parameter of type <code>STRING[10]</code>.  STRINGs are passed as pointers (to the array of characters) in library functions.</p>
+
+  <p>For this reason the STRING parameters in IecString functions are of type <code>STRING[0]</code> because the size is not checked.  The size must be explicitely passed as an additional function parameter.</p>
+
+  <p>The IEC <code>ADR()</code> operator on STRINGs is not necessary because this function is expecting a <code>STRING[]</code> (pointer to) and not a <code>UDINT</code>.</p>
+
+  <p>These details can be observed in the function prototypes of the automatically generated library header.</p>
+
+  <pre>
+    _BUR_PUBLIC signed long IecStringReplace(plcstring* destination, unsigned long size, plcstring* source, plcstring* find, plcstring* replace);
+  </pre>
+
+  <h2>Examples</h2>
+
+  <h3>IEC Structured Text</h3>
+
+  <pre>
+    VAR
+      &nbsp;&nbsp;String1 : STRING[80];
+      &nbsp;&nbsp;String2 : STRING[80] := 'Bob left his red house in his red shirt and got in his red car.';
+    END_VAR
+  </pre>
+
+  <pre>
+    PROGRAM _CYCLIC
+      &nbsp;&nbsp;IecStringReplace(String1, SIZEOF(String1), String2, 'red', 'blue');
+    END_PROGRAM
+  </pre>
+
+  <p>The value of <code>String1</code> is <code>'Bob left his blue house in his blue shirt and got in his blue car.'</code>.</p>
+
+</body>
+
+</html>

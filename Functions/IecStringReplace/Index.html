@@ -1,17 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>IecStringReplace</title>
   <link rel="stylesheet" href="../../Styles.css">
 </head>
+
 <body>
   <h1>IecStringReplace</h1>
 
   <p>Find in source and replace in destination.</p>
 
-  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.</p>
+  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.
+  </p>
 
   <img src="IecStringReplace.svg" alt="IecStringReplace interface" style="width: 391px; height: 180px;">
 
@@ -36,6 +39,12 @@
     </tr>
     <tr>
       <td>IN</td>
+      <td>source</td>
+      <td>STRING</td>
+      <td>Source string</td>
+    </tr>
+    <tr>
+      <td>IN</td>
       <td>find</td>
       <td>STRING</td>
       <td>Find string</td>
@@ -46,12 +55,43 @@
       <td>STRING</td>
       <td>Replace string</td>
     </tr>
+  </table>
+
+  <h2>Possible Errors</h2>
+
+  <table>
     <tr>
-      <td>IN</td>
-      <td>source</td>
-      <td>STRING</td>
-      <td>Source string</td>
+      <th>Constant</th>
+      <th>Description</th>
+      <th>Remedy</th>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_NULL</code></a></td>
+      <td>Destination, source, find, or replace strings are null (the memory address is zero)</td>
+      <td>All strings must have a valid memory address</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_SIZE_ZERO</code></a></td>
+      <td>Size is zero</td>
+      <td>Size must be non-zero</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_OVERLAP</code></a></td>
+      <td>The size of destination overlaps with the length of source, find, or replace</td>
+      <td>Destination's memory location must differ from source's and find's and replace's</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_WARNING_TRUNCATE</code></a></td>
+      <td>The length of the resulting string exceeds the size of destination</td>
+      <td>Increase the size of destination</td>
     </tr>
   </table>
+
+  <h2>Topics</h2>
+
+  <ul>
+    <li><a href="Description.html">Description</a></li>
+  </ul>
 </body>
+
 </html>

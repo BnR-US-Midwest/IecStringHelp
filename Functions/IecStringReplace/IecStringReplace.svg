@@ -95,13 +95,13 @@
     <text x="118px" y="83px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">size</text>
     <path d="M 79,101,105,101" stroke="black"/>
     <text x="66px" y="106px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">STRING</text>
-    <text x="118px" y="106px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">find</text>
+    <text x="118px" y="106px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">source</text>
     <path d="M 79,125,105,125" stroke="black"/>
     <text x="66px" y="129px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">STRING</text>
-    <text x="118px" y="129px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">replace</text>
+    <text x="118px" y="129px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">find</text>
     <path d="M 79,147,105,147" stroke="black"/>
     <text x="66px" y="152px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">STRING</text>
-    <text x="118px" y="152px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">source</text>
+    <text x="118px" y="152px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">replace</text>
     <path d="M 303,55,329,55" stroke="black"/>
     <text x="342px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:start;writing-mode:lr">DINT</text>
     <text x="290px" y="60px" style="font-size:12px;fill:#000000;font-family:Arial;text-anchor:end;writing-mode:lr">return</text>
