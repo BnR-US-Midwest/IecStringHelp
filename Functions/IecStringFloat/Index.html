@@ -4,19 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>IecStringDecimal</title>
+  <title>IecStringFloat</title>
   <link rel="stylesheet" href="../../Styles.css">
 </head>
 
 <body>
-  <h1>IecStringDecimal</h1>
+  <h1>IecStringFloat</h1>
 
-  <p>Convert integer to string as decimal.</p>
+  <p>Convert float to string.</p>
 
-  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> code, zero if successful.
-  </p>
+  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> number, zero if successful.</p>
 
-  <img src="IecStringDecimal.svg" alt="IecStringDecimal interface" style="width: 391px; height: 180px;">
+  <img src="IecStringFloat.svg" alt="IecStringFloat interface" style="width: 391px; height: 203px;">
 
   <table>
     <tr>
@@ -40,14 +39,20 @@
     <tr>
       <td>IN</td>
       <td>value</td>
-      <td>DINT</td>
-      <td>Signed integer</td>
+      <td>REAl</td>
+      <td>Floating point value</td>
     </tr>
     <tr>
       <td>IN</td>
       <td>width</td>
       <td>USINT</td>
       <td>Minimum character width</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>precision</td>
+      <td>USINT</td>
+      <td>Decimal precision</td>
     </tr>
     <tr>
       <td>IN</td>
@@ -65,12 +70,8 @@
       <th>Description</th>
     </tr>
     <tr>
-      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_FLAG_SIGN</code></td>
-      <td>Preceed number with '+' or '-' sign</td>
-    </tr>
-    <tr>
-      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_FLAG_SPACES</code></td>
-      <td>Left-pad number with spaces instead of zeros to fill width</td>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_FLAG_E_NOTATION</code></td>
+      <td>Use scientific notation</td>
     </tr>
   </table>
 
@@ -95,7 +96,7 @@
     <tr>
       <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_SIZE_INVALID</code></a></td>
       <td>The size is insufficient to hold the minimum character width of the number</td>
-      <td>Increase size to support the character length of the number or minimum width</td>
+      <td>Increase size to support the character length of the number</td>
     </tr>
   </table>
 
