@@ -11,13 +11,13 @@
 <body>
   <h1>Description</h1>
 
-  <p>In an IEC function declaration, a parameter of type <code>STRING[5]</code> is equivalent to a parameter of type <code>STRING[10]</code>. STRINGs are passed as pointers (to the array of characters) in library functions.</p>
+  <p>In an IEC function declaration, a parameter of type <code>STRING[5]</code> is equivalent to a parameter of type <code>STRING[10]</code>.  STRINGs are passed as pointers (to the array of characters) in library functions.</p>
 
-  <p>Therefore, the STRING parameters are denoted as <code>STRING[0]</code> because the size is not checked. The size must be explicitely passed as an additional function parameter.</p>
+  <p>For this reason the STRING parameters in IecString functions are of type <code>STRING[0]</code> because the size is not checked.  The size must be explicitely passed as an additional function parameter.</p>
 
-  <p><code>ADR()</code> is not necessary for the string parameters of this function because this function is expecting a <code>STRING[]</code> (pointer to) and not a <code>UDINT</code>.</p>
+  <p>The IEC <code>ADR()</code> operator on STRINGs is not necessary because this function is expecting a <code>STRING[]</code> (pointer to) and not a <code>UDINT</code>.</p>
 
-  <p>These details can be observed in the automatically generated library header, specifically the function prototypes.</p>
+  <p>These details can be observed in the function prototypes of the automatically generated library header.</p>
 
   <pre>
     _BUR_PUBLIC signed long IecStringCopy(plcstring* destination, unsigned long size, plcstring* source);
