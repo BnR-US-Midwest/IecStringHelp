@@ -106,6 +106,20 @@
             </object>
           </li>
         </ul>
+        <li> <object type="text/sitemap">
+          <param name="Name" value="IecStringDateTime">
+          <param name="Local" value="Functions/IecStringDateTime/Index.html">
+          <param name="ImageNumber" value="5">
+        </object>
+        </li>
+        <ul>
+          <li> <object type="text/sitemap">
+              <param name="Name" value="Description">
+              <param name="Local" value="Functions/IecStringDateTime/Description.html">
+              <param name="ImageNumber" value="11">
+            </object>
+          </li>
+        </ul>
       </ul>
       <li> <object type="text/sitemap">
           <param name="Name" value="Data Types and Constants">

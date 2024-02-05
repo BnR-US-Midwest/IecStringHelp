@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IecStringDateTime</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+
+<body>
+  <h1>IecStringDateTime</h1>
+
+  <p>Format date and/or time.</p>
+
+  <p>The function returns a <a href="../../Data Types and Constants/Constants.html">status</a> number, zero if successful.</p>
+
+  <img src="IecStringDateTime.svg" alt="IecStringDateTime interface" style="width: 411px; height: 157px;">
+
+  <table>
+    <tr>
+      <th>I/O</th>
+      <th>Parameter</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>destination</td>
+      <td>STRING</td>
+      <td>Destination string</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>size</td>
+      <td>UDINT</td>
+      <td>Size of destination</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>value</td>
+      <td>DTStructure</td>
+      <td>Date time value</td>
+    </tr>
+    <tr>
+      <td>IN</td>
+      <td>format</td>
+      <td>STRING</td>
+      <td>Format string</td>
+    </tr>
+  </table>
+
+  <h2>Delimeters</h2>
+
+  <p><code>-</code>, <code>_</code>, <code>.</code>, <code>,</code>, <code>/</code>, <code>:</code>, <code>;</code>, <code>(</code>, <code>)</code>, <code>[</code>, <code>]</code></p>
+
+  <h2>Tokens</h2>
+
+  <table>
+    <tr>
+      <th>Token</th>
+      <th>Component</th>
+      <th>Example(s)</th>
+    </tr>
+    <tr>
+      <td><code>yy</code></td>
+      <td>Year</td>
+      <td><code>01</code>, <code>02</code></td>
+    </tr>
+    <tr>
+      <td><code>yyyy</code></td>
+      <td>Year</td>
+      <td><code>2001</code>, <code>2002</code></td>
+    </tr>
+    <tr>
+      <td><code>M</code></td>
+      <td>Month</td>
+      <td><code>1</code>, <code>12</code></td>
+    </tr>
+    <tr>
+      <td><code>MM</code></td>
+      <td>Month</td>
+      <td><code>01</code>, <code>12</code></td>
+    </tr>
+    <tr>
+      <td><code>MMM</code></td>
+      <td>Month</td>
+      <td><code>Jan</code>, <code>Dec</code></td>
+    </tr>
+    <tr>
+      <td><code>MMMM</code></td>
+      <td>Month</td>
+      <td><code>January</code>, <code>December</code></td>
+    </tr>
+    <tr>
+      <td><code>d</code></td>
+      <td>Day</td>
+      <td><code>1</code>, <code>31</code></td>
+    </tr>
+    <tr>
+      <td><code>dd</code></td>
+      <td>Day</td>
+      <td><code>01</code>, <code>31</code></td>
+    </tr>
+    <tr>
+      <td><code>ddd</code></td>
+      <td>Weekday</td>
+      <td><code>M</code>, <code>Tu</code></td>
+    </tr>
+    <tr>
+      <td><code>dddd</code></td>
+      <td>Weekday</td>
+      <td><code>Monday</code>, <code>Tuesday</code></td>
+    </tr>
+    <tr>
+      <td><code>H</code></td>
+      <td>24 hour</td>
+      <td><code>1</code>, <code>14</code></td>
+    </tr>
+    <tr>
+      <td><code>HH</code></td>
+      <td>24 hour</td>
+      <td><code>01</code>, <code>14</code></td>
+    </tr>
+    <tr>
+      <td><code>h</code></td>
+      <td>12 hour</td>
+      <td><code>1</code>, <code>2</code></td>
+    </tr>
+    <tr>
+      <td><code>hh</code></td>
+      <td>12 hour</td>
+      <td><code>01</code>, <code>02</code></td>
+    </tr>
+    <tr>
+      <td><code>m</code></td>
+      <td>Minute</td>
+      <td><code>1</code>, <code>59</code></td>
+    </tr>
+    <tr>
+      <td><code>mm</code></td>
+      <td>Minute</td>
+      <td><code>01</code>, <code>59</code></td>
+    </tr>
+    <tr>
+      <td><code>s</code></td>
+      <td>Second</td>
+      <td><code>1</code>, <code>59</code></td>
+    </tr>
+    <tr>
+      <td><code>ss</code></td>
+      <td>Second</td>
+      <td><code>01</code>, <code>59</code></td>
+    </tr>
+    <tr>
+      <td><code>tt</code></td>
+      <td>Morning/afternoon</td>
+      <td><code>AM</code>, <code>PM</code></td>
+    </tr>
+    <tr>
+      <td><code>ff</code></td>
+      <td>Centiseconds</td>
+      <td><code>01</code>, <code>99</code></td>
+    </tr>
+    <tr>
+      <td><code>fff</code></td>
+      <td>Milliseconds</td>
+      <td><code>011</code>, <code>999</code></td>
+    </tr>
+  </table>
+
+  <h2>Possible Errors</h2>
+
+  <table>
+    <tr>
+      <th>Constant</th>
+      <th>Description</th>
+      <th>Remedy</th>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_NULL</code></a></td>
+      <td>Destination string is null (the memory address is zero)</td>
+      <td>Destination must have a valid memory address</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_SIZE_ZERO</code></a></td>
+      <td>Size is zero</td>
+      <td>Size must be non-zero</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_ERROR_OVERLAP</code></a></td>
+      <td>The size of destination overlaps with the length of format</td>
+      <td>Destination's memory location must differ from format's</td>
+    </tr>
+    <tr>
+      <td><a href="../../Data Types and Constants/Constants.html"><code>IECSTRING_WARNING_TRUNCATE</code></a></td>
+      <td>The resulting string length exceeds the size of destination</td>
+      <td>Increase the size of destination</td>
+    </tr>
+  </table>
+
+  <h2>Topics</h2>
+
+  <ul>
+    <li><a href="Description.html">Description</a></li>
+  </ul>
+
+</body>
+
+</html>

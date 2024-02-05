@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>IecStringDateTime Description</title>
+  <link rel="stylesheet" href="../../Styles.css">
+</head>
+
+<body>
+  <h1>Description</h1>
+
+  <h2>Parameters</h2>
+
+  <div class="note">
+    <p>In an IEC function declaration, a parameter of type <code>STRING[5]</code> is equivalent to a parameter of type <code>STRING[10]</code>. STRINGs are passed as <b>pointers</b> in library functions.</p>
+
+    <p>For this reason, STRING parameters in IecString functions are of type <code>STRING[0]</code> because the size is <b>cannot</b> be checked. If necessary, the size must be <b>explicitely</b> passed as an additional function parameter.</p>
+
+    <p>The IEC <code>ADR()</code> operator on STRINGs is not necessary because the function is expecting a <code>STRING[]</code>, not a <code>UDINT</code>.</p>
+  </div>
+
+  <p>The exact behavior of function parameters can be observed in the automatically generated header file.</p>
+
+  <pre>
+    _BUR_PUBLIC signed long IecStringDateTime(plcstring* destination, unsigned long size, struct DTStructure* value, plcstring* format);
+  </pre>
+
+  <h2>Default Format</h2>
+
+  <p>If <code>format</code> is null or empty, the default format <code>yyyy-MM-dd HH:mm</code> applies.</p>
+
+  <h2>Examples</h2>
+
+  <h3>IEC Structured Text</h3>
+
+  <pre>
+    VAR
+      &nbsp;&nbsp;String1 : STRING[80];
+      &nbsp;&nbsp;Value : DTStructure;
+    END_VAR
+  </pre>
+
+  <pre>
+    PROGRAM _INIT
+      &nbsp;&nbsp;Value.year := 2024;
+      &nbsp;&nbsp;Value.month := 1;
+      &nbsp;&nbsp;Value.day := 9;
+      &nbsp;&nbsp;Value.hour := 13;
+      &nbsp;&nbsp;Value.minute := 4;
+      &nbsp;&nbsp;Value.second := 7;
+    END_PROGRAM
+  </pre>
+
+  <pre>
+    PROGRAM _CYCLIC
+      &nbsp;&nbsp;IecStringDateTime(String1, SIZEOF(String1), Value, 'yyyy-MM-dd_HH.mm.ss');
+    END_PROGRAM
+  </pre>
+
+  <p>The value of <code>String1</code> is <code>'2024-01-09_13.04.07'</code>.</p>
+
+</body>
+
+</html>
